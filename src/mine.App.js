@@ -9,6 +9,8 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import SignInAndSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
 
 import './App.css';
+// import { setState } from 'expect/build/jestMatchersObject';
+
 class App extends React.Component {
   constructor() {
     super();
