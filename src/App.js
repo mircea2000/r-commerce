@@ -10,6 +10,9 @@ import SignInAndSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up.com
 import Header from './components/header/header.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import {setCurrentUser} from './redux/user/user.actions'
+import {selectCurrentUser} from './redux/user/user.selector'
+import { createStructuredSelector} from 'reselect'
+
 
 
 class App extends React.Component {
@@ -55,9 +58,9 @@ class App extends React.Component {
     );
   }
 }
-const mapStateToProps = ({ user }) => ({
+const mapStateToProps = createStructuredSelector({
   // currentUser: user.currentUser
-  currentUser: user.currentUser
+  currentUser: selectCurrentUser
 })
 
 const mapDispatchToProps = dispatch => ({
