@@ -62,6 +62,7 @@ class SignIn extends Component {
                         <CustomButton onClick={signInWithGoogle} isGoogleSignIn>Sign In Using Google</CustomButton>
                     </div>
                 </form>
+                <span className="or">OR</span>
             </div>
         );
     }

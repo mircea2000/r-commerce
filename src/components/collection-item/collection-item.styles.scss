@@ -4,60 +4,60 @@
     flex-direction: column;
     height: 350px;
     align-items: center;
-  
+    
     .image {
+      position: relative;
+      overflow: hidden;
       width: 100%;
       height: 95%;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       margin-bottom: 5px;
-      position: relative;
-      overflow: hidden;
-      .addToCart-btn {
-            position: absolute;
-            bottom: -60px;
-            width: 50%;
-            background: #fff;
-            left: 50%;
-            border: 0;
-            transform: translateX(-50%);
-            height: 50px;
-            -webkit-transition: all .25s ease-in-out;
-            -moz-transition: all .25s ease-in-out;
-            -ms-transition: all .25s ease-in-out;
-            -o-transition: all .25s ease-in-out;
-            transition: all .25s ease-in-out;
-            cursor: pointer;
-            &:hover {
-            background: #000;
-            color: #fff;
-        }
-
-        }
+      .customBtn {
+        position: absolute;
+        bottom: -60px;
+        width: 50%;
+        background: #fff;
+        left: 50%;
+        border: 0;
+        transform: translateX(-50%);
+        height: 50px;
+        -webkit-transition: all .25s ease-in-out;
+        -moz-transition: all .25s ease-in-out;
+        -ms-transition: all .25s ease-in-out;
+        -o-transition: all .25s ease-in-out;
+        transition: all .25s ease-in-out;
+        cursor: pointer;
         &:hover {
-            .addToCart-btn {
-                bottom: 30px;
-            }
+          background: #000;
+          color: #fff;
         }
+      }
+      &:hover {
+        opacity: .9;
+        .customBtn {
+          bottom: 30px;
+        }
+      }
     }
-  
+    
     .collection-footer {
       width: 100%;
       height: 5%;
       display: flex;
       justify-content: space-between;
       font-size: 18px;
-  
+      
       .name {
-        width: 90%;
+        width: 80%;
         margin-bottom: 15px;
       }
   
       .price {
-        width: 10%;
+        width: 20%;
         text-align: right;
       }
     }
-  }
   
+}

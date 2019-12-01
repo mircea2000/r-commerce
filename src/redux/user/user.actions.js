@@ -1,5 +1,5 @@
 import {UserActionTypes} from './user.types'
 export const setCurrentUser = user => ({
-    type: UserActionTypes.TOGGLE_CART_HIDDEN,
+    type: UserActionTypes.SET_CURRENT_USER,
     payload: user
 });
