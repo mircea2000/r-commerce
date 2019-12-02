@@ -27,11 +27,24 @@
 
     .quantity {
         padding-left: 20px;
+        display: flex;
+        .arrow {
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .value {
+            margin: 0 10px;
+        }
     }
 
     .remove-button {
         padding-left: 12px;
         cursor: pointer;
+        color: #cc2222;
+        color: #cc2222;
+        padding: 0 7px 2px;
+        border: 1px solid #cc2222;
+        border-radius: 3px;
     }
     &:nth-child(even) {
         background: #f7f7f7;
