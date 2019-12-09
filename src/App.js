@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import './App.css';
 
 import HomePage from './pages/homepage/homePage.component';
-import Shop from './pages/shop/shop.component';
+import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
 import Checkout from './pages/checkout/checkout.component'
 
@@ -51,7 +51,7 @@ class App extends React.Component {
         <div className="App">
           <Switch>
             <Route path="/" exact component={HomePage} />
-            <Route path="/shop" exact component={Shop} />
+            <Route path="/shop" component={ShopPage} />
             <Route path="/checkout" exact component={Checkout} />
             <Route path="/signin" exact render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignInAndSignUp/>)} />
             {/* <HomePage /> */}

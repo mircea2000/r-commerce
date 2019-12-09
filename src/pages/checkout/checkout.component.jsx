@@ -26,6 +26,9 @@ const Checkout = ({cartItems, total}) => {
                     <span>Price</span>
                 </div>
                 <div className="header-block">
+                    <span>Price Total</span>
+                </div>
+                <div className="header-block">
                     <span>Remove</span>
                 </div>
             </div>

@@ -1,14 +1,14 @@
 import React from 'react';
-import './preview-collection.styles.scss'
+import './collection-preview.styles.scss'
 import CollectionItem from '../collection-item/collection-item.component'
-import { Link } from 'react-router-dom'
-const PreviewCollection = ({title, items}) => {
+// import { withRouter } from 'react-router-dom'
+const CollectionPreview = ({title, items}) => {
     return (
         <div className="collection-preview">
             <h1 className="title">{title.toUpperCase()} 
                 <span>
                     {/* I need to come back */}
-                    <Link to={title.toLowerCase()}>View Entire Collection >>></Link>
+                    {/* <button to={title.toLowerCase()} onClick={() => history.push('/shop/')`${title}`}>View Entire Collection >>></button> */}
                 </span>
             </h1>
             <div className="preview">
@@ -23,5 +23,5 @@ const PreviewCollection = ({title, items}) => {
     );
 };
 
-export default PreviewCollection;
+export default CollectionPreview;
 
