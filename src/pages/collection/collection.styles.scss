@@ -4,16 +4,24 @@
   
     .title {
       font-size: 38px;
-      margin: 0 auto 30px;
+      margin: -25px -30px 30px;
+      height: 300px;
+      text-align: center;
+      color: #fff;
+      line-height: 300px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
     }
   
     .items {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-gap: 10px;
+      grid-gap: 30px 15px;
   
-      & .collection-item {
+      .collection-item {
         margin-bottom: 30px;
+        width: 100%;
       }
     }
   }

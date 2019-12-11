@@ -5,10 +5,11 @@ import { selectCollection } from '../../redux/shop/shop.selectors'
 import CollectionItem from'../../components/collection-item/collection-item.component'
 const CollectionPage = ({ collections }) => {
   // console.log(collections)
-  const {title, items} = collections;
+  const {title, items, backgroundUrl} = collections;
+  // console.log(imageUrl)
   return (
     <div className='collection-page'>
-      <h2 className='title'>{title}</h2>
+      <h2 className='title' style={{backgroundImage: `url(${backgroundUrl})`}}>{title}</h2>
       <div className='items'>
         {
           items.map(item=> (

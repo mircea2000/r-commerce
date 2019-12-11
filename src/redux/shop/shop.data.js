@@ -3,6 +3,7 @@ const SHOP_DATA = {
     id: 1,
     title: 'Hats',
     routeName: 'hats',
+    backgroundUrl: 'https://images.unsplash.com/photo-1529958030586-3aae4ca485ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
     items: [
       {
         id: 1,
@@ -64,6 +65,7 @@ const SHOP_DATA = {
     id: 2,
     title: 'Sneakers',
     routeName: 'sneakers',
+    backgroundUrl: 'https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F191025084755-van-sneakers-file.jpg',
     items: [
       {
         id: 10,
@@ -119,6 +121,7 @@ const SHOP_DATA = {
     id: 3,
     title: 'Jackets',
     routeName: 'jackets',
+    backgroundUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
     items: [
       {
         id: 18,
@@ -156,6 +159,7 @@ const SHOP_DATA = {
     id: 4,
     title: 'Womens',
     routeName: 'womens',
+    backgroundUrl: 'https://i.ibb.co/cvpntL1/hats.png',
     items: [
       {
         id: 23,
@@ -205,6 +209,7 @@ const SHOP_DATA = {
     id: 5,
     title: 'Mens',
     routeName: 'mens',
+    backgroundUrl: 'https://i.ibb.co/cvpntL1/mens.png',
     items: [
       {
         id: 30,
