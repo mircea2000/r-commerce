@@ -22,7 +22,7 @@ const StripeCheckoutButton = ({ price }) => {
             panelLabel='PAY NOW'
             token={onToken}
             stripekey={publishableKey}
-            locale="us"
+            locale="auto"
             email="mirceamarghitas@gmail.com"
             allowRememberMe 
             currency="USD"
