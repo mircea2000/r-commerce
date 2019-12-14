@@ -6,13 +6,24 @@ import { selectCartItems, selectCartItemsTotal } from '../../redux/cart/cart.sel
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component'
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component'
+
+import { CheckoutContainer, CheckoutHeader } from './checkout.styles'
 import './checkout.styles.scss';
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faPlusCircle,
+  faMinusCircle,
+  faTrashAlt
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faPlusCircle, faMinusCircle, faTrashAlt);
 
 const Checkout = ({cartItems, total}) => {
     return (
-        <div className="checkout-page">
+        <CheckoutContainer>
             <h2>CHECKOUT PAGE</h2>
-            <div className="checkout-header">
+            <CheckoutHeader>
                 <div className="header-block">
                     <span>Product</span>
                 </div>
@@ -31,7 +42,7 @@ const Checkout = ({cartItems, total}) => {
                 <div className="header-block">
                     <span>Remove</span>
                 </div>
-            </div>
+            </CheckoutHeader>
             {
                 cartItems.map(cartItem => (
                         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
@@ -40,7 +51,7 @@ const Checkout = ({cartItems, total}) => {
             }
             <div className="total">TOTAL: ${total}</div>
             <StripeCheckoutButton price={ total } />
-        </div>
+        </CheckoutContainer>
     );
 };
 
