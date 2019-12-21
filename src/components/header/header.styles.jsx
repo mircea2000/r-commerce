@@ -18,6 +18,8 @@ export const HeaderContainer = styled.header`
     margin-bottom: 25px;
     background-color: black;
     border-bottom: 3px solid #41ffbf;
+    position: fixed;
+    z-index: 1000
 `
 // Logo Container
 export const LogoContainer = styled(Link)`

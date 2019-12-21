@@ -17,7 +17,7 @@ import {setCurrentUser} from './redux/user/user.actions'
 import {selectCurrentUser} from './redux/user/user.selector'
 import { createStructuredSelector} from 'reselect'
 
-// import { selectCollectionsForPreview } from './redux/shop/shop.selectors'
+//  import { selectCollectionsForPreview } from './redux/shop/shop.selectors'
 
 
 class App extends React.Component {
@@ -25,7 +25,8 @@ class App extends React.Component {
   
   componentDidMount() {
 
-    // const { setCurrentUser, collectionsArray } = this.props; Adding collections in firebase
+    // Adding collections in firebase
+    // const { setCurrentUser, collectionsArray } = this.props; 
     const { setCurrentUser} = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
@@ -45,8 +46,8 @@ class App extends React.Component {
       }
       setCurrentUser(userAuth)
       // To add data to firebase
-      // addCollectionAndDocuments('oils', collectionsArray.map(({ title, items }) => ({ title, items })))
-    })
+      // addCollectionAndDocuments('collections', collectionsArray.map(({ title, items }) => ({ title, items })))
+    }, error => console.log(error))
   }
 
   componentWillUnmount() {

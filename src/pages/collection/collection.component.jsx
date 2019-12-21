@@ -3,16 +3,16 @@ import './collection.styles.scss';
 import { connect } from 'react-redux'
 import { selectCollection } from '../../redux/shop/shop.selectors'
 import CollectionItem from'../../components/collection-item/collection-item.component'
-const CollectionPage = ({ collections }) => {
-  // console.log(collections)
-  const {title, items, backgroundUrl} = collections;
-  // console.log(imageUrl)
+
+const CollectionPage = ({ collection }) => {
+  console.log(collection)
+  const {title, items, backgroundUrl} = collection;
+  console.log(backgroundUrl)
   return (
     <div className='collection-page'>
       <h2 className='title' style={{backgroundImage: `url(${backgroundUrl})`}}>{title}</h2>
       <div className='items'>
-        {
-          items.map(item=> (
+        { items.map(item=> (
             <CollectionItem key={item.id} item={item} />
         ))}
       </div>
@@ -20,7 +20,7 @@ const CollectionPage = ({ collections }) => {
   )
 }
 const mapStateToProps = (state, ownProps) => ({
-  collections: selectCollection(ownProps.match.params.collectionId)(state)
+  collection: selectCollection(ownProps.match.params.collectionId)(state)
 })
 
 export default connect(mapStateToProps)(CollectionPage);
